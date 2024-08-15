@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #1c1c1c; /* Dark mode background */
+    color: #e0e0e0; /* Light text color for dark mode */
+}
+
+header {
+    background-color: #121212; /* Dark header background */
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #bbb; /* Light link color for dark mode */
+    text-decoration: none;
+}
+
+main {
+    padding: 1em;
+}
+
+section {
+    margin-bottom: 2em;
+}
+
+footer {
+    background: #121212; /* Dark footer background */
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Dark mode styles for report cards */
+.reports-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.report-card {
+    background-color: #2c2c2c; /* Dark card background */
+    border: 1px solid #444; /* Slightly darker border */
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Darker shadow for cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.report-card h2 {
+    color: #ffcc00; /* Bright color for headings */
+    margin-top: 0;
+}
+
+.report-card p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #bbb; /* Light text color */
+}
+
+.report-card a {
+    color: #ffcc00; /* Bright link color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.report-card a:hover {
+    color: #ff9900; /* Slightly different color on hover */
+}
+
+.report-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 600px) {
+    nav ul {
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 0.5em 0;
+    }
+
+    .reports-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .report-card {
+        width: 100%;
+        max-width: 400px;
+    }
+}
