@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="test_styles.css">
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 1.5rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        header h1 {
+            margin: 0;
+            text-align: center;
+            font-size: 2.5rem;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0 0;
+        }
+        
+        nav ul li {
+            margin: 0 1rem;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            background-color: rgba(255,255,255,0.2);
+        }
+        
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        
+        .intro {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--dark-color);
+        }
+        
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .project-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .project-image {
+            height: 180px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        
+        .project-card:hover .project-image img {
+            transform: scale(1.05);
+        }
+        
+        .project-content {
+            padding: 1.5rem;
+        }
+        
+        .project-content h3 {
+            margin-top: 0;
+            color: var(--secondary-color);
+        }
+        
+        .project-content p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+        
+        .project-link {
+            display: inline-block;
+            padding: 0.6rem 1.2rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+        
+        .project-link:hover {
+            background-color: var(--dark-color);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--secondary-color);
+            color: white;
+            margin-top: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .projects-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Projects</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">About Me</a></li>
+                <li><a href="reports.html">Reports</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h3>Here you can find the GitHub pages to several projects I worked on.</h3>
+            <p>Each project represents a unique challenge and learning opportunity.</p>
+        </section>
+        
+        <section class="projects-container">
+            <!-- Project 1 -->
+            <article class="project-card">
+                <div class="project-image">
+                    <img src="images/Apaar_Designs.jpg" alt="Furniture Organizer Project">
+                </div>
+                <div class="project-content">
+                    <h3>Furniture Organizer</h3>
+                    <p>Developed webpage to hold information on stored furniture available for rent and staging</p>
+                    <a href="https://github.com/Aaryan-Thusoo/furniture_organizer" class="project-link">View Project</a>
+                </div>
+            </article>
+            
+            <!-- Project 2 -->
+            <article class="project-card">
+                <div class="project-image">
+                    <img src="images/barred_spiral_galaxy.jpg" alt="Bar Kinematics Research Project">
+                </div>
+                <div class="project-content">
+                    <h3>Bar Kinematics Research</h3>
+                    <p>All code used in determining the relations of physical properties of bar galaxies with the speed the bar structure rotates</p>
+                    <a href="https://github.com/Aaryan-Thusoo/AST425" class="project-link">View Project</a>
+                </div>
+            </article>
+            
+            <!-- Project 3 -->
+            <article class="project-card">
+                <div class="project-image">
+                    <img src="images/protostar.jfif" alt="Protostar Velocity Mapping Project">
+                </div>
+                <div class="project-content">
+                    <h3>Protostar Velocity Mapping GitHub</h3>
+                    <p>All code used in finding the velocity of H2O in Orion SrcI for the radial, rotational, and outflow components.</p>
+                    <a href="#" class="project-link">View Project</a>
+                </div>
+            </article>
+            
+            <!-- Project 4 -->
+            <article class="project-card">
+                <div class="project-image">
+                    <img src="images/data-visualization.jpg" alt="Portfolio Website Project">
+                </div>
+                <div class="project-content">
+                    <h3>Portfolio Website</h3>
+                    <p>A responsive personal portfolio website built with HTML, CSS, and JavaScript to showcase my work.</p>
+                    <a href="https://aaryan-thusoo.github.io/aaryan_thusoo/" class="project-link">View Project</a>
+                </div>
+            </article>
+            
+             <!-- Project 5 -->
+            <article class="project-card">
+                <div class="project-image">
+                    <img src="images/26_Proserpina.jpg" alt="Astrometry Calculation Project">
+                </div>
+                <div class="project-content">
+                    <h3>Astrometry Calculation</h3>
+                    <p>A set of calculations of Astrometry of asteroid Proserpina travelling around the Earth.</p>
+                    <a href="https://github.com/Aaryan-Thusoo/Astrometry/tree/master" class="project-link">View Project</a>
+                </div>
+            </article>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 My Projects. All rights reserved.</p>
+    </footer>
+</body>
+</html>
